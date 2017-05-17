@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">    
+    <title>Adopt an animal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    -->
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>	
+	<!-- api for geolocatisation with google maps -->
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script> 
+</head>
+<body>
+    <div class="topButton"><i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i></div>
+
+	<div id="wrapper">
+						
+			<!--HEADER-->
+			<header>
+				<div class="img_left_header"></div>
+				<a href="#!/"><div class="logo"></div></a>
+				<div class="img_right_header"></div>
+			</header>		
+
+			<!--NAV-->
+			<nav>
+				<ul>
+					<li><a>Adopt a pet</a>
+						<ul>
+							<li><a href="#!/">Adopt a dog</a></li>
+							<li><a href="javascript:void(0)">Adopt a cat</a></li>
+							<li><a href="javascript:void(0)">Adopt an other animal</a></li>						
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)">Give a pet</a>
+						<ul>
+							<li><a href="#!/give">Give a dog</a></li>
+							<li><a href="javascript:void(0)">Give a cat</a></li>
+							<li><a href="javascript:void(0)">Give an other animal</a></li>						
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)">Find a shelter</a></li>
+					<li><a>How to help?</a>
+						<ul>
+							<li><a href="javascript:void(0)">Volunteering</a></li>
+							<li><a href="javascript:void(0)">Donate</a></li>						
+						</ul>
+					</li>
+					<li><a href="#!/about">About us</a></li>
+					<li><a href="#!/contact">Contact us</a></li>
+				</ul>
+			</nav>
+
+			<!--CONTENT-->
+			<div id="content">
+
+				<ng-view></ng-view>			
+
+				<div class="contentLinks">			
+					<h2 class="boxGuide">Guides and advice for your pets</h2><hr><br>
+					<div class="contentLinksRow">
+						<div class="contentLinksLeft">
+							<ul>
+								<li><a href="javascript:void(0)">Educating your Dog</a></li>
+								<li><a href="javascript:void(0)">Feeding your dog</a></li>
+								<li><a href="javascript:void(0)">Maintaining your dog</a></li>
+							</ul>
+						</div>
+						<div class="contentLinksRight">
+							<ul>
+								<li><a href="javascript:void(0)">Understanding your Dog</a></li>
+								<li><a href="javascript:void(0)">Care for your dog</a></li>
+								<li><a href="javascript:void(0)">Reproduction of the dog</a></li>	
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="contentLastAnimals">
+					<h2>Last animals to adopt</h2><hr>
+
+					<div class="boxLastAnimals">
+						<center><h3>Dogs and puppies to adopt</h3></center>
+						<div class="slideShow">
+							<div class="slideShowLeft"><button id="btnSlideBack"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i></button></div>		
+							<div id="slideShowImg1"><img src="images/gallery/1.jpg" id="pic1" class="lastDetails" data-id="1"/></div>
+							<div id="slideShowImg2"><img src="images/gallery/2.jpg" id="pic2" class="lastDetails" data-id="2"/></div>
+							<div id="slideShowImg3"><img src="images/gallery/3.jpg" id="pic3" class="lastDetails" data-id="3"/></div>						
+							<div class="slideShowRight"><button id="btnSlideGo"><i class="fa fa-chevron-circle-right fa-2x" aria-hidden="true"></i></button></div>		
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!--FOOTER-->		
+			<footer>    	
+				<div class="footerTop">
+					<div class="footerLeft">
+						&nbsp;<hr>
+					</div>
+					<div class="footerMiddle">
+						<center><h3>Adopt an animal</h3></center>    		    		
+					</div>
+					<div class="footerRight">
+						&nbsp;<hr>
+					</div>	
+				</div>    	    	
+				<div class="footerLink">    		
+					<div class="footerLinkLeft"><a href="#!/">Home</a></div>
+					<div class="footerLinkMiddle"><a href="#!/about">About us</a></div>
+					<div class="footerLinkRight"><a href="#!/contact">Contact us</a></div>    		
+				</div>    	
+				<div class="footerCopyright">
+					<center><h4>Copyright <span class="footerText">© Adopt-an-animal.com – All right reserved</span></h4></center>
+				</div>    	
+			</footer>    
+  		   		 	    	
+    </div> <!--END wrapper-->   
+
+<!--angular-->    
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+<!--app-->
+    <script src="app/config.js"></script>
+    <script src="app/route.js"></script>
+<!--controllers-->
+    <script src="app/controllers/mainCtrl.js"></script>
+    <script src="app/controllers/giveCtrl.js"></script>
+    <script src="app/controllers/dogCtrl.js"></script>
+    <script src="app/controllers/contactCtrl.js"></script>
+    <script src="app/controllers/aboutCtrl.js"></script>
+</body>
+</html>

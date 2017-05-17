@@ -1,0 +1,20 @@
+<div ng-controller="dogCtrl as vm">			
+	<div id="result">	
+		<div class="resultItem">
+			<div class="row">
+				<div class="boxImgResult"><img src="images/gallery/{{vm.currentDog.pic}}" alt="" class="moreDetails" data-id="{{vm.currentDog.id}}" ></div>
+				<div class="boxContentResult">
+					<h3><a href="#!/dog/{{vm.currentDog.id}}">{{vm.currentDog.name}}</a></h3>
+					<ul class="resultList">
+						<li><span>Breed: </span>{{vm.currentDog.breedValue}}</li>
+						<li><span>Age: </span>{{vm.currentDog.age}}</li>
+						<li><span>Sex: </span>{{vm.currentDog.sexValue}}</li>
+						<li><span>Size: </span>{{vm.currentDog.size}}</li>
+						<li><span>Location: </span>{{vm.currentDog.locationValue}}</li>
+					</ul>				
+				</div>
+			</div>
+			<center><hr class="hrResult"></center>			
+		</div>
+	</div>			
+</div>			

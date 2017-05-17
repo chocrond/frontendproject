@@ -1,0 +1,12 @@
+<div ng-controller="contactCtrl as contact">
+	<center><h1 class="h1">Feel free to contact us</h1></center>
+	<div id="form-div">
+		<form class="form" name="formContact" id="formContact" ng-submit="contact.send()">
+<!--		<form class="form" id="form1" action="javascript:void(0)">-->
+		  <input type="text" class="feedback-input form-control" placeholder="Name" id="nameInput" required="required" autocomplete="off"/>
+		  <input type="email" class="feedback-input form-control" placeholder="Email" id="emailInput" required="required" autocomplete="off"/>      
+		  <textarea class="feedback-input form-control" placeholder="Comment" id="messageInput" required="required" autocomplete="off"></textarea>
+		  <button type="submit" class="btn btn-primary" id="btnSendMsg">Send Message</button>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,75 @@
+<div ng-controller="giveCtrl as give">
+	<div class="contentSearchSection">
+		<div class="contentForm">			
+			<p>You want to <b>give</b> an animal, you can fill here the details of your dog</p>				
+			<form method=POST enctype="multipart/form-data" ng-submit="give.submit(dog)" >
+				<label for="dogName"><span name="dogName_Label">Name</span></label>
+				<input type="text" name="dogName" id="dogName" placeholder="Name of the dog" ng-model="dog.name" >
+				<label for="breed"><span name="breed_Label">Breed</span></label>
+				<select id="breed" name="breed" ng-model="dog.breedCode">							
+					<option value="beagle" ng->Beagle</option>
+					<option value="brindle">Brindle</option>						
+					<option value="germanShepherd">German Shepherd</option>		
+					<option value="greyhound">Greyhound</option>		
+					<option value="labrador">Labrador</option>
+					<option value="pug">Pug</option>
+					<option value="swissShepherd">Swiss Shepherd</option>
+					<option value="yorkshireTerrier">Yorkshire terrier</option>
+				</select>
+
+				<label for="size"><span name="size_Label">Size</span></label>
+				<select id="size" name="size" ng-model="dog.size">
+					<option value="Little" >Little</option>
+					<option value="Medium">Medium</option>
+					<option value="Big">Big</option>
+				</select>
+				<br><br>
+
+				<label for="sex"><span name="sex_Label">Sex</span></label>
+				<select id="sex" name="sex" ng-model="dog.sexCode">
+					<option value="ML" >Male</option>
+					<option value="FM">Female</option>						
+				</select>
+
+				<label for="age"><span name="age_Label">Age</span></label>
+				<select id="age" name="age" ng-model="dog.age">
+					<option value="Puppy">Puppy</option>
+					<option value="Young">Young</option>
+					<option value="Adult">Adult</option>
+					<option value="Senior">Senior</option>						
+				</select>
+
+				<label for="color"><span name="color_Label">Color</span></label>
+				<select id="color" name="color" ng-model="dog.colorCode">
+					<option value="Col1">Black</option>
+					<option value="Col6">Black/White</option>
+					<option value="Col7">Black/Brown</option>
+					<option value="Col3">Brown/Chocolate</option>
+					<option value="Col4">Gray</option>
+					<option value="Col8">Tan/Yellow/Fawn</option>
+					<option value="Col5">Tricolor (Tan/Brown &amp; Black &amp; White)</option>
+					<option value="Col2">White</option>
+				</select>
+
+				<br><br>
+
+				<label for="location"><span name="location_Label">Location</span></label>
+				<select id="location" name="location" ng-model="dog.locationCode">
+					<option value="beersheva">Beer Sheva</option>
+					<option value="eilat">Eilat</option>		
+					<option value="haifa">Haifa</option>							
+					<option value="jerusalem">Jerusalem</option>
+					<option value="telaviv">Tel Aviv</option>																		
+				</select>
+				<br><br>
+				<label for="imageUpload"><span name="imageUpload_Label">Image</span></label>
+				<input type="file" name="imageUpload" id="imageUpload" ng-model="dog.pic"/>
+<!--				<input type="file" name="imageUpload" id="imageUpload" ng-model="dog.pic" onchange="angular.element(this).scope().uploadFile(this.files)"/>-->
+				<button id="btnSend">Send</button>
+
+			</form><br><br> <!--END FORM-->
+			<center><h3 id="resultTitle"></h3></center>
+		</div>
+	</div>
+	<div id="result"></div>						
+</div>
